@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Payment</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="processingUI" class="hidden">
+        <p>Processing Payment...</p>
+    </div>
+
+ <div id="app">
+    <div id="successUI" class="hidden">
+      <h2>Payment Successful!</h2>
+      <p>Amount: <span id="amountSpan"></span></p>
+      <p>Phone Number: <span id="phoneSpan"></span></p>
+      <p>Currency: <span id="currencySpan"></span></p>
+    </div>
+
+    <div id="failureUI" class="hidden">
+      <h2>Payment Failed</h2>
+      <p>Amount: <span id="amountSpan"></span></p>
+      <p>Phone Number: <span id="phoneSpan"></span></p>
+      <p>Currency: <span id="currencySpan"></span></p>
+    </div>
+
+    <form id="paymentForm">
+      <label for="amount">Amount:</label><br>
+      <input type="number" id="amount" name="amount"><br>
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone"><br>
+      <label for="currency">Currency:</label><br>
+      <select id="currency" name="currency">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+      </select><br>
+      <button type="submit">Pay</button>
+    </form>
+ </div>
+</body>
+</html>
+
+<script src="./script.js"></script>
